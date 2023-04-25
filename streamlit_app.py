@@ -8,7 +8,7 @@ import pandas as pd
 
 
 # #Loading up the Regression model we created
-@st.cache_resource
+@st.cache_data
 def import_model() :
     model = xgb.XGBClassifier()
     model.load_model('./data/xgb_model.json')
